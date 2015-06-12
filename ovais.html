@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+    <title></title>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="./bower_components/firebase/firebase.js"></script>
+    <script src="./bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="ovais.js"></script>
+</head>
+<body ng-app="newMod">
+<div ng-controller="awaenCtrl">
+    <md-input-container>
+        <label>Name</label>
+        <input ng-model="task">
+    </md-input-container>
+    <md-button class="md-primary" ng-click="abc(task);">ok</md-button>
+
+</div>
+</body>
+</html>

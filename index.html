@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+
+        <script src="./bower_components/angular/angular.js"></script>
+        <script src="./bower_components/angular-aria/angular-aria.js"></script>
+        <script src="./bower_components/angular-animate/angular-animate.js"></script>
+        <script src="./bower_components/angular-material/angular-material.js"></script>
+        <script src="./bower_components/angular-new-router/dist/router.es5.min.js"></script>
+        <script src="./components/newdua/newdua.js"></script>
+        <script src="./bower_components/firebase/firebase.js"></script>
+        <script src="./bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="./index.js"></script>
+    
+    <style>
+        body{
+            margin: 10px;
+        }
+        #div1{
+            background: lightgoldenrodyellow;
+        }
+        #div2{
+            background: lightblue;
+        }
+        
+        #duaContent,#reqsArea{
+            text-align: center;
+            margin: 5px;
+        }
+        h3{
+            text-align: center;
+        }
+        #duaArea{
+            background: #ffffff;
+            margin: 30px;
+            border: 2px solid black;
+        }
+        #duaCheck{
+            margin-left: 90px;
+        }
+    </style>
+    </head>
+    <body ng-app="duaApp">
+        <div ng-controller="homepageCtrl">
+            <div layout="row">
+                <div id="div1" layout="column" flex="30">
+                 <md-button class="md-primary" ng-link="newdua">New Dua</md-button>
+                 <md-button class="md-primary" target="_blank">All Public Duas</md-button>
+                 <md-button class="md-primary" target="_blank">Login</md-button>
+                 <md-button class="md-primary" target="_blank">Admin Login</md-button>
+                </div>
+                <div id="div2" layout="column" flex="60">
+
+                 <h3>"All Requested Duas"</h3>
+                   <div id="duaArea" layout="row">
+                    <div id="duaContent" flex="70">
+                        <p>Oh GOD! Increase my Knowledge</p>  
+                    </div>
+                    <div id="reqsArea" flex="25">
+                        <div id="duaCheck">
+                            <md-checkbox aria-label="Checkbox No Ink" class="md-primary">
+                           </md-checkbox>
+                        </div>
+                        <div id="counter">
+                            read: num++
+                        </div>
+                        <div id="duaReqs">
+                            Requested By: Ovais Siddiqui
+                        </div>       
+                    </div>
+
+                   </div>
+
+
+                  </div>
+                <div>
+
+                    {{user1}}<md-button class="md-primary" ng-click="login();"><img src="images/facebook-button.png"> Login</md-button>
+                </div>
+
+                </div>
+            <ng-viewport></ng-viewport>
+          </div>
+
+    </body>
+</html>

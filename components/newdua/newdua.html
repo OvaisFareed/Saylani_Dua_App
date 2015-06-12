@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+       <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../bower_components/angular-material/angular-material.css">
+
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../../bower_components/angular-material/angular-material.js"></script>
+    <script src="../../bower_components/firebase/firebase.js"></script>
+    <script src="../../bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="../../bower_components/angular-new-router/dist/router.es5.min.js"></script>
+    <script src="newdua.js"></script>
+    </head>
+    <body ng-app="duaApp">
+        <div ng-controller="NewduaController">
+            <div layout="column">
+                <div id="duatxtArea" flex="30">
+         <md-input-container flex>
+        <label>Write your Dua here:</label>
+        <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
+      </md-input-container>
+                </div>
+                <div flex="20">
+                    <div layout="row">
+                        <div id="radiobtns">
+                            <md-radio-group ng-model="data.group1">
+                        <md-radio-button value="private"> Private </md-radio-button>
+                        <md-radio-button value="public">Public</md-radio-button>
+                    </md-radio-group>
+                            
+                        </div>
+                        <div id="doneBtn">
+                            <md-button class="md-warn md-raised md-hue-2">Done</md-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
